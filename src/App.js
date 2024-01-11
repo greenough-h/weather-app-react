@@ -17,7 +17,8 @@ export default function App() {
 
   function displayTemp(response) {
     setReady(true);
-    setMessage(response.data.main.temperature);
+    setMessage(response.data.name);
+    console.log(response.data.main.temp);
   }
 
   function handleSubmit(event) {
