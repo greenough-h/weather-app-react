@@ -8,9 +8,9 @@ export default function Footer() {
         Built by
         <a href="https://github.com/greenough-h"> Hayley Greenough</a>, sourced
         on
-        <a href="https://github.com/greenough-h/weather-app-plus"> Github</a>,
+        <a href="https://github.com/greenough-h/weather-app-react"> Github</a>,
         and hosted on
-        <a href="https://cool-pastelito-weather-app.netlify.app/"> Netlify</a>
+        <a href="https://weather-app-react-88.netlify.app/"> Netlify</a>
       </p>
     </div>
   );
