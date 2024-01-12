@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Footer from "./Footer";
+import WeatherInfo from "./WeatherInfo.js";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
-import FormattedDate from "./FormattedDate.js";
-
 import "./App.css";
 
 export default function App() {
@@ -43,41 +42,7 @@ export default function App() {
             <input type="submit" className="search-submit" />
           </form>
         </div>
-        <div className="all-data">
-          <div className="city-data">
-            <h1 id="city">{weatherData.name}</h1>
-            <div className="data-details">
-              <p>
-                <span id="date">
-                  {" "}
-                  <FormattedDate date={weatherData.dt * 1000} />
-                </span>
-                ,
-                <span id="cond" className="text-capitalize">
-                  {" "}
-                  {weatherData.weather[0].description}
-                </span>
-                <br />
-                Humidity:
-                <strong>
-                  <span id="humidity"> {weatherData.main.humidity}%</span>
-                </strong>
-                , Wind:
-                <strong>
-                  <span id="wind">
-                    {" "}
-                    {Math.round(weatherData.wind.speed)} km/hr
-                  </span>
-                </strong>
-              </p>
-            </div>
-          </div>
-          <div className="temperature-block">
-            <div className="temp-icon">☀️</div>
-            <div className="temp"> {Math.round(weatherData.main.temp)} </div>
-            <div className="unit">°C</div>
-          </div>
-        </div>
+        <WeatherInfo data={weatherData} />
         <Footer />
       </div>
     );
