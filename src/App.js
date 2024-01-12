@@ -8,7 +8,7 @@ import "./App.css";
 export default function App() {
   const [ready, setReady] = useState(null);
   let [city, setCity] = useState(null);
-  let [message, setMessage] = useState("");
+  let [weatherData, setWeatherData] = useState({});
 
   function updateCity(event) {
     event.preventDefault();
@@ -17,7 +17,7 @@ export default function App() {
 
   function displayTemp(response) {
     setReady(true);
-    setMessage(response.data.name);
+    setWeatherData(response.data);
     console.log(response.data.main.temp);
   }
 
@@ -45,26 +45,29 @@ export default function App() {
         </div>
         <div className="all-data">
           <div className="city-data">
-            <h1 id="city">{message}</h1>
+            <h1 id="city">{weatherData.name}</h1>
             <div className="data-details">
               <p>
                 <span id="date">Tuesday 20:43</span>,
-                <span id="cond">clear sky</span>
+                <span id="cond"> {weatherData.weather[0].description}</span>
                 <br />
                 Humidity:
                 <strong>
-                  <span id="humidity"> 20%</span>
+                  <span id="humidity"> {weatherData.main.humidity}%</span>
                 </strong>
                 , Wind:
                 <strong>
-                  <span id="wind"> 8 km/hr</span>
+                  <span id="wind">
+                    {" "}
+                    {Math.round(weatherData.wind.speed)} km/hr
+                  </span>
                 </strong>
               </p>
             </div>
           </div>
           <div className="temperature-block">
             <div className="temp-icon">☀️</div>
-            <div className="temp">20</div>
+            <div className="temp"> {Math.round(weatherData.main.temp)} </div>
             <div className="unit">°C</div>
           </div>
         </div>
@@ -72,18 +75,14 @@ export default function App() {
       </div>
     );
   } else {
+    let city = "New York";
+    const apiKey = "50fa4024e3b1d5eac2f51ab18a47e997";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayTemp);
+
     return (
-      <div className="Header">
-        <form className="search-form" onSubmit={handleSubmit}>
-          <input
-            type="search"
-            className="search-input"
-            placeholder="Enter a City..."
-            required
-            onChange={updateCity}
-          />
-          <input type="submit" className="search-submit" />
-        </form>
+      <div className="Header App">
+        <h3> Loading... </h3>
       </div>
     );
   }
