@@ -5,9 +5,9 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
-export default function App() {
+export default function App(props) {
   const [ready, setReady] = useState(null);
-  let [city, setCity] = useState(null);
+  let [city, setCity] = useState(props.defaultCity);
   let [weatherData, setWeatherData] = useState({});
 
   function updateCity(event) {
@@ -47,7 +47,6 @@ export default function App() {
       </div>
     );
   } else {
-    let city = "New York";
     const apiKey = "50fa4024e3b1d5eac2f51ab18a47e997";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayTemp);
