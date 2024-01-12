@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate.js";
 import "bootstrap/dist/css/bootstrap.css";
+import WeatherIcon from "./WeatherIcon.js";
 
 export default function WeatherInfo(props) {
   return (
@@ -31,7 +32,12 @@ export default function WeatherInfo(props) {
         </div>
       </div>
       <div className="temperature-block">
-        <div className="temp-icon">☀️</div>
+        <div className="temp-icon">
+          <WeatherIcon
+            icon={props.data.weather[0].icon}
+            alt={props.data.weather[0].description}
+          />
+        </div>
         <div className="temp"> {Math.round(props.data.main.temp)} </div>
         <div className="unit">°C</div>
       </div>
