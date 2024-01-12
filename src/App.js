@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Footer from "./Footer";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
+import FormattedDate from "./FormattedDate.js";
 
 import "./App.css";
 
@@ -18,7 +19,6 @@ export default function App() {
   function displayTemp(response) {
     setReady(true);
     setWeatherData(response.data);
-    console.log(response.data.main.temp);
   }
 
   function handleSubmit(event) {
@@ -48,8 +48,15 @@ export default function App() {
             <h1 id="city">{weatherData.name}</h1>
             <div className="data-details">
               <p>
-                <span id="date">Tuesday 20:43</span>,
-                <span id="cond"> {weatherData.weather[0].description}</span>
+                <span id="date">
+                  {" "}
+                  <FormattedDate date={weatherData.dt * 1000} />
+                </span>
+                ,
+                <span id="cond" className="text-capitalize">
+                  {" "}
+                  {weatherData.weather[0].description}
+                </span>
                 <br />
                 Humidity:
                 <strong>
