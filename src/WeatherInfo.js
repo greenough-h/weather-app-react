@@ -37,6 +37,7 @@ export default function WeatherInfo(props) {
           <WeatherIcon
             icon={props.data.weather[0].icon}
             alt={props.data.weather[0].description}
+            size="large"
           />
         </div>
         <WeatherTemperature celsius={Math.round(props.data.main.temp)} />
