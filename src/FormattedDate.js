@@ -11,6 +11,8 @@ export default function FormattedDate(props) {
     "Saturday",
   ];
 
+  let shortdays = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+
   let day = days[date.getDay()];
   let hour = date.getHours();
   let minutes = date.getMinutes();
@@ -18,5 +20,9 @@ export default function FormattedDate(props) {
     minutes = `0${minutes}`;
   }
 
-  return `${day} ${hour}:${minutes}`;
+  if (props.type === "short") {
+    return shortdays[date.getDay()];
+  } else {
+    return `${day} ${hour}:${minutes}`;
+  }
 }
