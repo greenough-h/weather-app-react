@@ -40,7 +40,7 @@ export default function App(props) {
               required
               onChange={updateCity}
             />
-            <input type="submit" className="search-submit" />
+            <input type="submit" className="search-submit" value="Search" />
           </form>
         </div>
         <WeatherInfo data={weatherData} />
