@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Footer from "./Footer";
-import WeatherInfo from "./WeatherInfo.js";
-import WeatherForecast from "./WeatherForecast";
+import Footer from "./components/Footer";
+import WeatherInfo from "./components/WeatherInfo.js";
+import WeatherForecast from "./components/WeatherForecast";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";

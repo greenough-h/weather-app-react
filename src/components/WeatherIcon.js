@@ -1,5 +1,5 @@
 import React from "react";
-import "./WeatherIcon.css";
+import "../styles/WeatherIcon.css";
 
 export default function WeatherIcon(props) {
   let iconLink = `http://openweathermap.org/img/wn/${props.icon}@2x.png`;
