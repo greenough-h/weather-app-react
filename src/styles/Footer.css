@@ -9,3 +9,9 @@
   color: #551a8b;
   color: #fd4c55;
 }
+
+@media (max-width: 570px) {
+  .Footer {
+    font-size: 12px;
+  }
+}

@@ -97,3 +97,67 @@ strong {
   color: black;
   border: 1px solid #801846;
 }
+
+@media (max-width: 660px) {
+  .App {
+    margin: 30px 20px;
+  }
+
+  h1 {
+    font-size: 58px;
+  }
+
+  input {
+    display: block;
+  }
+
+  .Header .search-input {
+    width: 100%;
+  }
+
+  .Header .search-submit {
+    width: 30%;
+    margin: 0 auto;
+    padding: 7px;
+  }
+
+  .all-data {
+    flex-direction: column;
+  }
+
+  .city-data {
+    text-align: center;
+  }
+
+  .temperature-block {
+    margin: 10px auto;
+  }
+}
+
+@media (min-width: 395px) and (max-width: 570px) {
+  .WeatherForecast {
+    max-width: 300px;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .App {
+    margin: 30px 20px;
+  }
+
+  .Header .search-input {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .Header .search-submit {
+    width: 40%;
+    margin: 0 auto;
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+}
