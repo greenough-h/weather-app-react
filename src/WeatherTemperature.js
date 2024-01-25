@@ -18,10 +18,11 @@ export default function WeatherTemperature(props) {
       <span className="temperature-block">
         <div className="temp"> {props.celsius}</div>
         <div className="unit">
-          °C |{" "}
+          °C
+          {/* |{" "}
           <a href="/" className="text-decoration-none" onClick={showFahrenheit}>
             °F
-          </a>{" "}
+          </a>{" "} */}
         </div>
       </span>
     );
