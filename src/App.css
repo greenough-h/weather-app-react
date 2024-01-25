@@ -1,6 +1,6 @@
 body {
-  background: linear-gradient(#551a8b, #9198e5);
-  background-color: #9198e5;
+  background: linear-gradient(#9c4e96, #ffa892);
+  background-color: #ffa892;
   background-repeat: no-repeat;
   font-family: sans-serif;
 }
@@ -8,7 +8,7 @@ body {
 .App {
   background-color: white;
   max-width: 650px;
-  margin: 55px auto;
+  margin: 75px auto;
   padding: 25px 25px 15px 25px;
   border-radius: 15px;
   box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
@@ -33,6 +33,8 @@ h1 {
 
 strong {
   color: #86cef7;
+  color: #801846;
+  color: #fd4c55;
 }
 
 .temperature-block {
@@ -64,13 +66,13 @@ strong {
 }
 
 .Header .search-form {
-  border-bottom: 1px solid #deca64;
+  border-bottom: 1px solid #c1246b;
   padding: 0 0 20px 0;
 }
 
 .Header .search-input {
-  border: 1px solid #551a8b;
-  background: #f9f7fe;
+  border: 1px solid #801846;
+  background: #fff7fb;
   padding: 10px;
   margin: 5px 0 10px 5px;
   width: 80%;
@@ -79,8 +81,8 @@ strong {
 }
 
 .Header .search-submit {
-  border: 1px solid #551a8b;
-  background: #551a8b;
+  border: 1px solid #801846;
+  background: #801846;
   padding: 10px;
   margin-left: 5px;
   width: 15%;
@@ -91,7 +93,7 @@ strong {
 }
 
 .Header .search-submit:hover {
-  background: #f9f7fe;
+  background: #fff7fb;
   color: black;
-  border: 1px solid #551a8b;
+  border: 1px solid #801846;
 }

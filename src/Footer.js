@@ -5,26 +5,24 @@ export default function Footer() {
   return (
     <div className="Footer">
       <p>
-        Built by
+        Built by{" "}
         <a
           href="https://github.com/greenough-h"
           target="_blank"
           rel="noreferrer"
         >
-          {" "}
           Hayley Greenough
         </a>
-        , sourced on
+        , sourced on{" "}
         <a
           href="https://github.com/greenough-h/weather-app-react"
           target="_blank"
           rel="noreferrer"
         >
-          {" "}
           Github
         </a>
-        , and hosted on
-        <a href="https://weather-app-react-88.netlify.app/"> Netlify</a>
+        , and hosted on{" "}
+        <a href="https://weather-app-react-88.netlify.app/">Netlify</a>
       </p>
     </div>
   );

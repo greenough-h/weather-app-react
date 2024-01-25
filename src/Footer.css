@@ -1,10 +1,11 @@
 .Footer {
   text-align: center;
   font-size: 14px;
-  border-top: 1px solid #deca64;
+  border-top: 1px solid #c1246b;
   padding: 30px 0 0 0;
 }
 
 .Footer a {
   color: #551a8b;
+  color: #fd4c55;
 }
